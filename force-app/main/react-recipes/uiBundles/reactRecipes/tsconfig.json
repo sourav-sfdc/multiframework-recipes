@@ -38,5 +38,8 @@
     "vitest-env.d.ts",
     "vitest.setup.ts"
   ],
+  "exclude": [
+    "src/recipes/diagrams/kitchen-sink/**"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

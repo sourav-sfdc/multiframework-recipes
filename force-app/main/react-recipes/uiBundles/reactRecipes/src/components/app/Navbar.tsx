@@ -12,6 +12,8 @@ const navItems = [
   { to: '/error-handling', label: 'Error Handling' },
   { to: '/styling', label: 'Styling' },
   { to: '/routing', label: 'Routing' },
+  { to: '/diagrams', label: 'Diagrams' },
+  { to: '/jointjs-kitchsink-app', label: 'Kitchen Sink' },
 ];
 
 export default function Navbar() {

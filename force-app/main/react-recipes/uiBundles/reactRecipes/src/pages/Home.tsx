@@ -58,6 +58,12 @@ const categories = [
     description:
       'End-to-end patterns that combine multiple Salesforce APIs and React features into realistic, production-style application pages.',
   },
+  {
+    to: '/diagrams',
+    name: 'Diagrams',
+    description:
+      'Interactive diagrams built with JointJS+. Covers mounting an imperative diagramming library inside React with proper lifecycle cleanup.',
+  },
 ];
 
 export default function Home() {

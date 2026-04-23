@@ -59,6 +59,22 @@ export default defineConfig(({ mode }) => {
         '@utils': path.resolve(__dirname, './src/utils'),
         '@styles': path.resolve(__dirname, './src/styles'),
         '@assets': path.resolve(__dirname, './src/assets'),
+        // JointJS+ kitchen-sink demo — its sources import assets via absolute
+        // `/assets/...` URLs and theme SCSS via `/joint-light-theme/...`.
+        // Aliases scope those lookups into the recipe folder.
+        '/assets': path.resolve(
+          __dirname,
+          './src/recipes/diagrams/kitchen-sink/assets'
+        ),
+        '/joint-light-theme': path.resolve(__dirname, './joint-light-theme'),
+      },
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // Lets `@import 'joint-light-theme/styles'` resolve from the app root.
+          loadPaths: [path.resolve(__dirname)],
+        },
       },
     },
 

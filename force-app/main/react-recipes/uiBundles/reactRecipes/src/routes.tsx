@@ -11,6 +11,8 @@ import ErrorHandling from './pages/ErrorHandling';
 import Styling from './pages/Styling';
 import Routing, { RouteParametersPage, NestedRoutesPage } from './pages/Routing';
 import Integration from './pages/Integration';
+import Diagrams from './pages/Diagrams';
+import KitchenSinkApp from './pages/KitchenSinkApp';
 import { RouteParametersDetail } from './recipes/routing/RouteParameters';
 import NestedRoutes, {
   NestedRoutesIndex,
@@ -18,6 +20,12 @@ import NestedRoutes, {
 } from './recipes/routing/NestedRoutes';
 
 export const routes: RouteObject[] = [
+  // Full-screen route — deliberately outside AppLayout so no navbar or page
+  // chrome renders. The kitchen-sink editor takes over the viewport.
+  {
+    path: '/jointjs-kitchsink-app',
+    element: <KitchenSinkApp />,
+  },
   {
     path: '/',
     element: <AppLayout />,
@@ -90,6 +98,11 @@ export const routes: RouteObject[] = [
         path: 'integration',
         element: <Integration />,
         handle: { showInNavigation: true, label: 'Integration' },
+      },
+      {
+        path: 'diagrams',
+        element: <Diagrams />,
+        handle: { showInNavigation: true, label: 'Diagrams' },
       },
       {
         path: '*',

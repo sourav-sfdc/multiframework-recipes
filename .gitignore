@@ -57,3 +57,4 @@ schema.graphql
 playwright-report/                                                                                            
 test-results/                                                                                                 
   
+.npmrc

@@ -36,5 +36,9 @@
   },
   "volta": {
     "node": "22.16.0"
+  },
+  "dependencies": {
+    "@joint/layout-directed-graph": "4.2.3",
+    "@joint/plus": "^4.2.3"
   }
 }

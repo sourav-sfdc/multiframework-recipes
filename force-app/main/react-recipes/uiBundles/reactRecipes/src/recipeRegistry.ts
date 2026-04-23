@@ -373,6 +373,16 @@ export const recipeRegistry: RecipeEntry[] = [
     description:
       'Fetches Accounts, Contacts, and Opportunities in a single aliased GraphQL request.',
   },
+
+  // Diagrams
+  {
+    category: 'Diagrams',
+    categoryRoute: '/diagrams',
+    recipeIndex: 0,
+    name: 'Basic Diagram',
+    description:
+      'Mounts a JointJS+ Paper inside a React component with two linked shapes and proper unmount cleanup.',
+  },
 ];
 
 /** Returns the number of recipes for a given category route (e.g. "/hello"). */
